@@ -1,11 +1,11 @@
-package table;
+package Entity;
 
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.Accessors;
-import org.hibernate.type.descriptor.sql.SmallIntTypeDescriptor;
+
 import java.util.*;
 import javax.persistence.*;
 
@@ -34,7 +34,7 @@ public class Orders {
    private float item_discount;
     @Column(name="Tax")
     private float tax;
-    @ManyToOne(cascade=CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name="user_id",referencedColumnName = "id")
     private User user;
 

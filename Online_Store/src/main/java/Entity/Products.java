@@ -1,4 +1,4 @@
-package table;
+package Entity;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -47,7 +47,7 @@ public class Products {
         return categorys;
     }
 
-    @ManyToOne(cascade=CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name="store_id",referencedColumnName = "id")
     private Stores store;
 

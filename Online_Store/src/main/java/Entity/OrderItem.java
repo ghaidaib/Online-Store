@@ -1,4 +1,4 @@
-package table;
+package Entity;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -34,7 +34,7 @@ public class OrderItem {
     @Column(name="Updated_at")
     private Date updatedat;
 
-    @ManyToOne(cascade=CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name="orders_id",referencedColumnName = "id")
     private Orders orders;
 

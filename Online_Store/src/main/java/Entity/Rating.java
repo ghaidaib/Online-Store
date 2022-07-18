@@ -1,4 +1,4 @@
-package table;
+package Entity;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -25,11 +25,11 @@ public class Rating {
     @Column(name="User_id",nullable=false)
     private long user_id;
 
-    @ManyToOne(cascade=CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name="store_id",referencedColumnName = "id")
     private Stores store;
 
-    @ManyToOne(cascade=CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name="user_id",referencedColumnName = "id")
     private User user;
 }

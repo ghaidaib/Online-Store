@@ -1,4 +1,4 @@
-package table;
+package Entity;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -34,7 +34,7 @@ public class CartItem {
     @Column(name="Updated_at")
     private Date updatedat;
 
-    @ManyToOne(cascade=CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name="cart_id",referencedColumnName = "id")
     private Cart cart;
 

@@ -1,4 +1,4 @@
-package table;
+package Entity;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -38,7 +38,7 @@ public class Transaction {
     @Column(name = "Content")
     private String content;
 
-    @ManyToOne(cascade=CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name="user_id",referencedColumnName = "id")
     private User user;
 
@@ -46,7 +46,7 @@ public class Transaction {
         return user;
     }
 
-    @ManyToOne(cascade=CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name="orders_id",referencedColumnName = "id")
     private Orders orders;
 
