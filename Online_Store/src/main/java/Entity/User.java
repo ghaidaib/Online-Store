@@ -14,6 +14,7 @@ import java.util.*;
 @Getter
 @NoArgsConstructor
 @Accessors(chain = true)
+@NamedQuery(name="find all users",query="select u from User u")
 @Table(name = "users")
 public class User {
     @Id
